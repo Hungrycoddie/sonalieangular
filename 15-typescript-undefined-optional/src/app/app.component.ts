@@ -17,8 +17,19 @@ export class AppComponent {
   selectedUserId?: string;
 
   get selectedUser() {
+    // const user = this.users.find((user) => user.id === this.selectedUserId);
+
     return this.users.find((user) => user.id === this.selectedUserId);
+    // console.log(users);
+    // return user;
   }
+
+
+  constructor() {
+    const userNames = this.users.map(user => user.name);
+  console.log(userNames);
+  }
+
 
   onSelectUser(id: string) {
     this.selectedUserId = id;
