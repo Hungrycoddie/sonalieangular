@@ -14,8 +14,20 @@ import { retryWhen } from 'rxjs';
   imports: [HeaderComponent, UserComponent, TasksComponent],
 })
 export class AppComponent {
-  users = DUMMY_USERS;
+  // users = DUMMY_USERS;
+
+  users = [
+    { id: '1', name: 'Alice' },
+    { id: '2', name: 'Bob' },
+    { id: '3', name: 'Charlie' },
+    { id: '4', name: 'David' },
+    { id: '5', name: 'Eve' },
+]
+
+
+
   selectedUserId?: string;
+  userNames: any;
 
   get selectedUser() {
     // const user = this.users.find((user) => user.id === this.selectedUserId);
